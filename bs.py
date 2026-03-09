@@ -1,4 +1,4 @@
-import os, json, sys, requests, msvcrt
+import os, json, sys, requests, msvcrt, time
 
 # colors - standard stuff, don't change it
 class Colors:
@@ -97,6 +97,8 @@ if __name__ == "__main__":
     try:
         main()
     except KeyboardInterrupt:
+        print("kys")
+        time.sleep(2)
         pass # user killed it, fine by me
     except Exception as e:
         print(f"\n{Colors.RED}[!] fatal: {e}{Colors.RESET}")
