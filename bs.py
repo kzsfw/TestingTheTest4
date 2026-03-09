@@ -14,8 +14,8 @@ logo = f"""{Colors.CYAN}
    ___    ______                            
   / _ )  / __/ /________ ____  ___  ___ ____
  / _  | _\ \/ __/ __/ _ `/ _ \/ _ \/ -_) __/
-/____(_)___/\__/_/  \_,  / .__/ .__/\__/_/   
-                        /_/  /_/             
+/____(_)___/\__/_/  \_,_/ .__/ .__/\__/_/   
+                       /_/  /_/                
 {Colors.YELLOW}~~~ by VR ~~~{Colors.RESET}
 """
 
@@ -70,7 +70,7 @@ def main():
             do_upd = True
         else:
             print(f"{Colors.YELLOW}[?] {msg}{Colors.RESET}")
-            print(f"{Colors.BOLD}confirm update [press y/n]:{Colors.RESET}")
+            print(f"{Colors.BOLD}confirm update [y/n]:{Colors.RESET}")
             # getch is cleaner than input() for single chars
             if msvcrt.getch().decode(errors='ignore').lower() == 'y': do_upd = True
 
@@ -91,7 +91,7 @@ def main():
             except:
                 print(f"{Colors.RED}[!] download failed.{Colors.RESET}")
         else:
-            print(f"{Colors.RED}[-] download aborted.{Colors.RESET}")
+            print(f"{Colors.RED}[-] operation aborted.{Colors.RESET}")
 
 if __name__ == "__main__":
     try:
